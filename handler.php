@@ -4,12 +4,16 @@ require_once('db.php');
 if($_POST['userData']) {
   
   $data = json_decode($_POST['userData'], true);
+
+  $name = htmlspecialchars($data['name']);
+  $email = htmlspecialchars($data['email']);
+  $comment = htmlspecialchars($data['comment']);
   
   $stmt = $dbh->prepare("INSERT INTO users (`name`, `email`, `comment`) VALUES (:name, :email, :comment)");
   $stmt->execute([
-    'name'=>$data['name'],
-    'email'=>$data['email'],
-    'comment'=>$data['comment'],
+    'name'=>$name,
+    'email'=>$email,
+    'comment'=>$comment,
   ]);
 }
 

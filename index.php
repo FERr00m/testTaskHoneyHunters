@@ -21,49 +21,51 @@
         <a href="#"><img src="./img/logo.png" width="264" height="54" alt="logo HoneyHunters"></a>
       </div>
     </header>
-    <section class="form">
-      <div class="container">
-      <!-- <h1>Отзывы</h1> -->
-        <img class="logo-mail" src="./img/mail.png" width="240" height="240" alt="logo mail">
+    <main>
+      <section class="form">
+        <div class="container">
+        <!-- <h1>Отзывы</h1> -->
+          <img class="logo-mail" src="./img/mail.png" width="240" height="240" alt="logo mail">
 
-        <form id="form">
-          <div class="form-fields">
-            <div class="form-fields__inputs">
-              <div>
-                <label class="form-label" for="name">Имя <span>*</span></label>
-                <input class="form-control name" type="text" name="name" id="name">
+          <form id="form">
+            <div class="form-fields">
+              <div class="form-fields__inputs">
+                <div>
+                  <label class="form-label" for="name">Имя <span>*</span></label>
+                  <input class="form-control name" type="text" name="name" id="name">
+                </div>
+                
+                <div>
+                  <label class="form-label" for="email">E-mail <span>*</span></label>
+                  <input class="form-control email" type="email" name="email" id="email">
+                </div>
               </div>
-              
-              <div>
-                <label class="form-label" for="email">E-mail <span>*</span></label>
-                <input class="form-control email" type="email" name="email" id="email">
+              <div class="form-fields__text-area">
+                <label class="form-label" for="comment">Комментарий <span>*</span></label>
+                <textarea class="form-control comment" name="comment" id="comment"></textarea>
               </div>
             </div>
-            <div class="form-fields__text-area">
-              <label class="form-label" for="comment">Комментарий <span>*</span></label>
-              <textarea class="form-control comment" name="comment" id="comment"></textarea>
+            <div class="button">
+              <input class="btn btn-danger" type="submit" value="Записать">
             </div>
-          </div>
-          <div class="button">
-            <input class="btn btn-danger" type="submit" value="Записать">
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="comments">
-      <div class="container">
-        <h2 class="comments__header">Выводим комментарии</h2>
-      
-        <div class="users-cards">
-          <?
-          require_once('handler.php')
-
-          ?>
-
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="comments">
+        <div class="container">
+          <h2 class="comments__header">Выводим комментарии</h2>
+        
+          <div class="users-cards">
+            <?
+            require_once('handler.php')
+
+            ?>
+
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">
